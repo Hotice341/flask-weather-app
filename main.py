@@ -1,10 +1,11 @@
 import datetime
+import os
 
 import requests
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-api_key = '19875930c10fc382ba648cec25b02c80'
+api_key = os.environ['API_KEY']
 
 
 @app.route('/', methods=['GET'])
