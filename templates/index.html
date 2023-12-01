@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- Weather banner start -->
+<section class="weather-banner-2">
+    <div class="container">
+        <div class="content">
+            <div class="row justify-content-between">
+                <div class="col-xl-12 col-lg-12 mb-lg-0 mb-4">
+                    <div class="text">
+                        <h5 class="fw-4 fs-23">Weather and Forecast</h5>
+                        <h2 class="fw-4 lh-120">
+                            Daily Weather <br />
+                            Forecast
+                        </h2>
+                        <p class="fs-19 fw-5 lh-150 bottom-space pt-0">
+                            Get the latest weather forecast for today with up-to-date <br />
+                            information on temperature, precipitation, and more.
+                        </p>
+                        <div class="col-xl-9">
+                            <form action="/forecast" method="post">
+                                <div class="input-group m-0">
+                                    <input type="text" class="form-control" id="city" name="city" required placeholder="Search for location..." />
+                                    <button type="submit"><i class="fal fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Weather banner End -->
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- Today Detail area start -->
+<section class="toady-detail pt-100">
+    <div class="container">
+        <div class="title text-center">
+            <h2 class="fw-5 fs-40 lh-120 ls-5 color-dark mb-16">{{ city }} - {{ country }}</h2>
+            <p class="fw-4 fs-16 lh-160 ls-2 color-gray mb-48">
+                A weather app that provides accurate and up-to-date weather information for users, built on flask with weatherstack APi.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12 col-md-12 col-12 mb-xl-0 mb-3">
+                <div class="detail bg-white-1 p-100 text-center">
+                    <div class="d-flex align-items-center justify-content-around mb-32">
+                        <h4 class="fw-6 color-dark m-0">{{ city }}</h4>
+                        <img src="{{ weather_icons[0] }}" alt="">
+                    </div>
+                    <h5 class="fw-5 fs-23 color-dark">{{ today_date }}</h5>
+                    <h2 class="fw-6 fs-95 lh-120 color-dark m-0">{{ temperature }} <b>°</b></h2>
+                    <p class="fw-6 mb-32 color-dark">{{ description }}</p>
+                    <div class="d-flex align-items-center justify-content-center mb-24">
+                        <span class="color-dark text-end">{{ wind_speed }} km/h</span>
+                        <span class="color-dark text-start">Wind</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="color-dark text-end">Hum</span>
+                        <span class="color-dark text-start">{{ humidity }}%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Today Detail area End -->
+
+{% endblock %}
